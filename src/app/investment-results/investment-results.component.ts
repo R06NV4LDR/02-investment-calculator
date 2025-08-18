@@ -13,7 +13,7 @@ export class InvestmentResultsComponent {
   private investmentService = inject(InvestmentService);
   //constructor(private investmentService: InvestmentService) {}
 
-  results = (() => this.investmentService.resultData.asReadonly());
+  results = computed(() => this.investmentService.resultData());
 
   // get results() {
   //   return this.investmentService.resultData;
